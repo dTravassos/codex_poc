@@ -37,3 +37,14 @@ Edit secrets before running in shared env.
 
 API uses typed loader in `apps/api/src/config/env.ts` to validate env vars.
 
+
+## Code Quality
+
+Run lint: (cd apps/api && npm run lint)
+
+Fix lint issues: (cd apps/api && npm run lint:fix)
+
+Check formatting: (cd apps/api && npm run format:check)
+
+Apply formatting: (cd apps/api && npm run format)
+
