@@ -1,8 +1,8 @@
-import 'dotenv/config'
-import { z } from 'zod'
+import 'dotenv/config';
+import { z } from 'zod';
 
 const Schema = z.object({
-  NODE_ENV: z.enum(['development','test','production']).default('development'),
+  NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   PORT: z.coerce.number().positive().default(3000),
   CORS_ORIGIN: z.string().default('http://localhost:5173'),
   DATABASE_URL: z.string().url(),
@@ -13,12 +13,12 @@ const Schema = z.object({
   JWT_EXPIRES_IN: z.string().default('2h'),
   APP_LOCALE: z.string().default('pt-BR'),
   APP_TIMEZONE: z.string().default('America/Sao_Paulo'),
-})
+});
 
-const parsed = Schema.safeParse(process.env)
+const parsed = Schema.safeParse(process.env);
 if (!parsed.success) {
-  console.error('Invalid env config:', parsed.error.flatten().fieldErrors)
-  process.exit(1)
+  console.error('Invalid env config:', parsed.error.flatten().fieldErrors);
+  process.exit(1);
 }
 
-export const config = parsed.data
+export const config = parsed.data;

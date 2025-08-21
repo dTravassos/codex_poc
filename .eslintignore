@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+build
+.config.js
+.config.cjs
+apps//dist
+apps//coverage
