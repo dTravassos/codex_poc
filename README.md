@@ -45,6 +45,29 @@ The API exposes basic authentication endpoints.
 - **Login**: `POST /auth/login` with `{ email, password }` returns a signed JWT.
 - **Me**: `GET /auth/me` with header `Authorization: Bearer <token>` returns the current user.
 
+## Database Setup
+
+Ensure Docker PostgreSQL service is running.
+
+Copy env template and set the database URL:
+
+```bash
+cp apps/api/.env.example apps/api/.env.local
+```
+
+Run migrations:
+
+```bash
+cd apps/api
+npm run prisma:migrate
+```
+
+Open Prisma Studio for inspection:
+
+```bash
+npm run prisma:studio
+```
+
 ## Code Quality
 
 Run lint: (cd apps/api && npm run lint)
