@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node -e \"require('http').createServer((_,res)=>{res.end('API dev stub')}).listen(3000)\"",
+    "dev": "tsx watch src/index.ts",
     "build": "echo 'build api'",
     "start": "echo 'start api'"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.16.0"
+  },
   "engines": {
     "node": ">=18"
   }
