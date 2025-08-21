@@ -1,5 +1,16 @@
 import http from 'http';
 import { config } from './config/env';
+import { prisma } from './lib/prisma';
+
+;(async () => {
+  try {
+    await prisma.$connect();
+    console.log('[api] Database connected');
+  } catch (err) {
+    console.error('[api] Database connection failed', err);
+    process.exit(1);
+  }
+})();
 
 const server = http.createServer((_, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
