@@ -24,3 +24,16 @@ pnpm install
 - Set up the backend with NestJS and Prisma in `apps/api`.
 - Add Docker and Docker Compose configuration in `docker/`.
 - Implement the frontend in `apps/web/`.
+
+## Environment Setup
+
+Copy env template:
+
+```bash
+cp apps/api/.env.example apps/api/.env.local
+```
+
+Edit secrets before running in shared env.
+
+API uses typed loader in `apps/api/src/config/env.ts` to validate env vars.
+
