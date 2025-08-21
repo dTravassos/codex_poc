@@ -1,0 +1,15 @@
+{
+  "name": "@codex/api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'start api dev server'",
+    "build": "echo 'build api'",
+    "start": "echo 'start api'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
