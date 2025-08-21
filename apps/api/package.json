@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "echo 'start api dev server'",
+    "dev": "node -e \"require('http').createServer((_,res)=>{res.end('API dev stub')}).listen(3000)\"",
     "build": "echo 'build api'",
     "start": "echo 'start api'"
   },
