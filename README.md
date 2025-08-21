@@ -37,6 +37,13 @@ Edit secrets before running in shared env.
 
 API uses typed loader in `apps/api/src/config/env.ts` to validate env vars.
 
+## Authentication
+
+The API exposes basic authentication endpoints.
+
+- **Register**: `POST /auth/register` with `{ email, password }` creates a new user.
+- **Login**: `POST /auth/login` with `{ email, password }` returns a signed JWT.
+- **Me**: `GET /auth/me` with header `Authorization: Bearer <token>` returns the current user.
 
 ## Code Quality
 
